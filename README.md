@@ -1,5 +1,3 @@
-# I'm Ram!
-
 I'm currently pursuing my Master's in Business Administration in Pondicherry University.
 
 # Employment History
@@ -30,7 +28,22 @@ I'm currently pursuing my Master's in Business Administration in Pondicherry Uni
 - Organized inter-college events and managed to bring in sponsors
 - Helped the department in conducting webinars by _automating the process of generating certificates and emailing them to participants using **Python**_.
 
+# Certifications
+
+## Associated with Marketing and Advertising
+### Diploma in Radio Programming
+from **The Academy of Radio Studies, Chennai** issued **August 2013**
+
+## Associated with Programming
+### Data Science and Machine Learning
+from **Coding Ninjas India** issued **Jan 2020**
+[See Credentials](https://ninjasfiles.s3.amazonaws.com/certificate269159ecce2de6828c48f63ba3ef8a68cb3475.pdf)
+
+### Machine Learning Nanodegree
+from **Udacity** issued **Feb 2018**
+[See Credentials](https://graduation.udacity.com/confirm/GCRDHWWE)
+
 # Leadership and Awards
 - Awarded as "Star Performer" for two times for running effective social media campaigns and managing large amount of data at Notion Press Media Pvt Ltd.
-- Awarded as the best employee for writing creative scripts and recieving acclaim from the client.
+- Awarded as the best employee for writing creative scripts and recieving acclaim from the client at BigFM
 - Secured second place in "Electronic Business presentation" event happened in a national level Inter-Collegiate Competition conducted by St.Joseph Arts and Science College.
