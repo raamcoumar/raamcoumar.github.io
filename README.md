@@ -1,8 +1,6 @@
-## Who am I?
+# Hi there, I'm raam.
 
-You can use the [editor on GitHub](https://github.com/raamcoumar/raamcoumar.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Experienced Copywriter with a demonstrated history of working in the broadcast media industry. Skilled in Scriptwriting, Advertising, Digital Marketing, and Voice Acting.
 
 ### Markdown
 
