@@ -31,16 +31,16 @@ I'm currently pursuing my Master's in Business Administration in Pondicherry Uni
 # Certifications
 
 ## Associated with Marketing and Advertising
-### Diploma in Radio Programming
-from **The Academy of Radio Studies, Chennai** issued **August 2013**
+- ### Diploma in Radio Programming
+from [The Academy of Radio Studies](http://academyofradiostudies.com/), Chennai issued August 2013
 
 ## Associated with Programming
 ### Data Science and Machine Learning
-from **Coding Ninjas India** issued **Jan 2020**
+from [Coding Ninjas India](https://www.codingninjas.com/) issued Jan 2020 
 [See Credentials](https://ninjasfiles.s3.amazonaws.com/certificate269159ecce2de6828c48f63ba3ef8a68cb3475.pdf)
 
 ### Machine Learning Nanodegree
-from **Udacity** issued **Feb 2018**
+from **Udacity** issued **Feb 2018** 
 [See Credentials](https://graduation.udacity.com/confirm/GCRDHWWE)
 
 # Leadership and Awards
