@@ -19,7 +19,9 @@ I'm currently pursuing my Master's in Business Administration in Pondicherry Uni
 ### Programming Coordinator
 #### at [Suryan FM](www.suryanfm.in) from June 2014 to June 2016
 
-- 
+- Coordinated with clients for their campaign and produced radio commercials (Creative/ Scripting and Production) for their ON-AIR sales campaign.
+- Helped the organization to acheive highest revenue through advertising among competitors during festive seasons by producing large volume of creatives in limited time.
+- Managed several on-ground events with footfall from 100 to 3000 audiences.
 
 ```markdown
 Syntax highlighted code block
