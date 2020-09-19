@@ -1,10 +1,25 @@
-# Hi there, I'm raam.
+# What am I doing now?
 
-Experienced Copywriter with a demonstrated history of working in the broadcast media industry. Skilled in Scriptwriting, Advertising, Digital Marketing, and Voice Acting.
+I'm currently pursuing my Master's in Business Administration in Pondicherry University.
 
-### Markdown
+# Employment History
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Digital Marketing Executive
+#### at [Notion](https://notionpress.com/) from August 2017 to October 2018
+
+- Developed and executed comprehensive digital strategy focused on promoting newly-published books and increasing sales.
+- Channelized work-flow for the Project Management team and Marketing team resulting in saving work time, reducing hindrances and increased productivity.
+
+### Copy Writer
+#### at [92.7 BigFM](https://bigfmindia.com/) from July 2016 to August 2017
+
+- Conceptualised and wrote lucid copy for ON-AIR advertising campaigns helping in revenue generation.
+- Clients in Chennai region constantly approached BigFM for advertising due to the exceptional creative scripts and production values.
+
+### Programming Coordinator
+#### at [Suryan FM](www.suryanfm.in) from June 2014 to June 2016
+
+- 
 
 ```markdown
 Syntax highlighted code block
