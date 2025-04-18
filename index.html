@@ -1,162 +1,67 @@
-<!-- JOHN DOE’S PAGE - https://github.com/cadars/john-doe/ -->
+import React from "react";
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    
-    <title>Site title</title>
-    <meta name="description" content="Site description">
-    
-    <!-- Recommended minimum -->
-    <meta property="og:title" content="Site title">
-    <meta property="og:description" content="Site description">
-    <meta property="og:image" content="img/site-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- You could also inline the stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    
-  </head>
-  <body>
-    
-    <header>
-      <h1>
-        <a href="#home">Site title</a>
-      </h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#photos">Photos</a>
-        <a href="#portfolio">Portfolio</a>
-      </nav>
-    </header>
-    
-    <main>
-      
-      <section id="home"> <!-- HOME -->
-        
-        <p>This is the homepage, displayed by default.</p>
-        
-      </section>
-      
-      <section id="about"> <!-- ABOUT -->
-        
-        <p>This is the about page. <a href="#another-page">This is a link to another page</a>.</p>
-        
-        <figure> 
-          <a href="#img-about">         
-            <img loading="lazy" alt="" src="//dummyimage.com/1200x600/ddd/bbb" width="1200" height="600">
-          </a>
-          <figcaption>Example of an image with a link to a larger version.</figcaption>
-        </figure>
-        
-      </section>
-      
-      <section id="news"> <!-- NEWS -->
-        
-        <article>
-          <h2>Blogging with Joe Bloggs <time datetime="2020-10-10">10.10.2020</time></h2>
-          <p> One <em>could</em> use this setup to write <s>a blog</s> short updates. For images make sure to use the <code>loading="lazy"</code> attribute, so they get loaded only when needed.<label for="lazy">1</label><input type="checkbox" id="lazy"><small>
-            
-            You might be able to use it for <code>iframe</code> embeds too(?), but maybe just write a link to the Youtube video instead.
-            
-           </small></p>
-        </article>
-              
-        <article>
-          <h2><a href="https://example.com">Why Your Cat Bites You</a> <time datetime="2004-12-12">12.12.2004</time></h2>
-          <p>Honestly you don't want to know.</p>
-        </article>
-      
-      </section>
-      
-      <section id="photos"> <!-- PHOTOS -->
-        
-        <p>An example of a photo gallery with a lightbox.</p>
+export default function PersonalWebsite() {
+  return (
+    <main className="min-h-screen bg-black text-white p-4 max-w-md mx-auto font-sans">
+      <header className="flex flex-col items-start py-6">
+        <h1 className="text-4xl font-bold mb-4">Ram</h1>
+        <nav className="flex flex-wrap gap-4 text-sm">
+          <a href="#about" className="hover:underline">About</a>
+          <a href="#timeline" className="hover:underline">Career timeline</a>
+          <a href="#news" className="hover:underline">In the news</a>
+          <a href="#contact" className="hover:underline">Contact</a>
+        </nav>
+      </header>
 
-        <!-- You can use this grid of images in any page -->
-        
-        <div class="grid">
-          <a href="#img-01"><img loading="lazy" alt="" src="//dummyimage.com/300x300/ddd/bbb"></a>
-          <a href="#img-02"><img loading="lazy" alt="" src="//dummyimage.com/400x300/ddd/bbb"></a>
-          <a href="#img-03"><img loading="lazy" alt="" src="//dummyimage.com/300x400/ddd/bbb"></a>
-          <a href="#img-04"><img loading="lazy" alt="" src="//dummyimage.com/300x300/ddd/bbb"></a>
-          <a href="#img-05"><img loading="lazy" alt="" src="//dummyimage.com/400x300/ddd/bbb"></a>
-          <a href="#img-06"><img loading="lazy" alt="" src="//dummyimage.com/300x400/ddd/bbb"></a>
-          <a href="#img-07"><img loading="lazy" alt="" src="//dummyimage.com/300x300/ddd/bbb"></a>
-          <a href="#img-08"><img loading="lazy" alt="" src="//dummyimage.com/400x300/ddd/bbb"></a>
-          <a href="#img-09"><img loading="lazy" alt="" src="//dummyimage.com/300x400/ddd/bbb"></a>
-          <a href="#img-10"><img loading="lazy" alt="" src="//dummyimage.com/300x300/ddd/bbb"></a>
-          <a href="#img-11"><img loading="lazy" alt="" src="//dummyimage.com/400x300/ddd/bbb"></a>
-          <a href="#img-12"><img loading="lazy" alt="" src="//dummyimage.com/300x400/ddd/bbb"></a>
-          <a href="#img-13"><img loading="lazy" alt="" src="//dummyimage.com/300x300/ddd/bbb"></a>
-          <a href="#img-14"><img loading="lazy" alt="" src="//dummyimage.com/400x300/ddd/bbb"></a>
-          <a href="#img-15"><img loading="lazy" alt="" src="//dummyimage.com/300x400/ddd/bbb"></a>
-        </div>
-        
+      <section className="my-20 text-center">
+        <h2 className="text-3xl font-bold mb-4">My name is Ram.</h2>
+        <p className="text-3xl font-bold">This is my website.</p>
       </section>
-      
-      <section id="portfolio"> <!-- PORTFOLIO -->
 
-        <div class="slides">
-          <figure><img loading="lazy" alt="" src="//dummyimage.com/4000x3000/ddd/bbb"></figure>
-          <figure><img loading="lazy" alt="" src="//dummyimage.com/3000x4000/ddd/bbb"></figure>
-          <figure><img loading="lazy" alt="" src="//dummyimage.com/4000x3000/ddd/bbb"></figure>
-          <figure>
-            <p>You could also have text over here…</p>
-          </figure>
-          <figure>
-            <img loading="lazy" alt="" src="//dummyimage.com/1000x1000/ddd/bbb">
-            <figcaption>…or image captions</figcaption>
-          </figure>
-          <figure style="background:#fdcb39">
-            <img loading="lazy" alt="" src="//dummyimage.com/3000x4000/ddd/bbb">
-            <figcaption>add a solid background</figcaption>
-          </figure>
-          <figure class="cover">
-            <img loading="lazy" alt="" src="https://64.media.tumblr.com/7904066936b9324571738bbbeeb082e9/tumblr_myopxy8uJI1qz4vi0o1_1280.jpg">
-            <p style="color:#fff">or go full bleed</p>
-          </figure>
-        </div>
+      <section id="about" className="my-16">
+  <h2 className="text-xl font-semibold mb-2">About Me</h2>
+  <p className="text-sm leading-relaxed">
+    Chennai-based. 8+ years in content, campaigns, and digital. Good with words. Better with timing. I care about growth, clarity, and not wasting people’s time.
+  </p>
+</section>
 
+      <section id="timeline" className="my-16">
+        <h2 className="text-xl font-semibold mb-2">Career Timeline</h2>
+        <ul className="text-sm space-y-2">
+          <li>📍 2021–Now — Social Media, Freshworks</li>
+          <li>📍 2017–2018 — Digital Marketing, Notion Press</li>
+          <li>📍 2016–2017 — Copywriting, BigFM</li>
+          <li>📍 2014–2016 — Copywriting, Suryan FM</li>
+        </ul>
       </section>
-        
-      <section id="another-page"> <!-- ANOTHER PAGE -->
-        
-        <p>This page is not referenced in the menu, yet it exists.</p>
-        <p><a href="#about">← back</a></p>
-        
+
+      <section id="news" className="my-16">
+        <h2 className="text-xl font-semibold mb-2">In the News</h2>
+        <ul className="text-sm space-y-2">
+          <li><a href="https://www.afaqs.com/interviews/meet-the-brain-behind-the-viral-signal-posters-that-people-mistook-for-an-official-ad" className="text-blue-400 underline">afaqs! – Signal poster campaign</a></li>
+          <li><a href="https://economictimes.indiatimes.com/tech/tech-bytes/signals-twitter-strikes-a-chord-with-gen-z-and-millennials/articleshow/80437455.cms" className="text-blue-400 underline">Economic Times – Signal’s Gen Z strategy</a></li>
+          <li><a href="https://www.fastcompany.com/90598439/its-never-been-more-important-to-safeguard-your-data-these-ads-might-make-you-actually-care" className="text-blue-400 underline">Fast Company – Privacy & creative campaigns</a></li>
+        </ul>
       </section>
-      
+
+      <section id="contact" className="my-16">
+  <h2 className="text-xl font-semibold mb-2">Contact</h2>
+  <p className="text-sm mb-2">Got a project or idea? Let’s talk.</p>
+  <a href="mailto:hi@veryramdom.com" className="text-blue-400 underline text-sm">hi@veryramadom.com</a>
+  <div className="mt-4 flex gap-4 items-center">
+  <a href="https://linktr.ee/ram" target="_blank" className="text-blue-400 underline text-sm">linktr.ee/ram</a>
+  <a href="https://www.linkedin.com/in/ramkumar-g/" target="_blank" aria-label="LinkedIn">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 fill-current text-blue-400" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.3h.1c.7-1.3 2.3-2.6 4.7-2.6 5 0 5.9 3.3 5.9 7.6V24h-5V15c0-2.1-.03-4.9-3-4.9-3 0-3.5 2.3-3.5 4.7V24h-5V8z"/></svg>
+  </a>
+  <a href="https://x.com/veryramdom" target="_blank" aria-label="X / Twitter">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 fill-current text-blue-400" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.5 8.5 0 01-2.7 1.03A4.28 4.28 0 0015.5 4c-2.36 0-4.28 1.92-4.28 4.29 0 .34.04.67.1.99A12.13 12.13 0 013 5.1a4.3 4.3 0 001.32 5.71 4.22 4.22 0 01-1.94-.53v.05c0 2.1 1.49 3.86 3.46 4.26a4.3 4.3 0 01-1.93.07 4.29 4.29 0 004 2.97A8.6 8.6 0 012 20.52a12.1 12.1 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.18 0-.35-.01-.53A8.72 8.72 0 0024 6.6a8.5 8.5 0 01-2.54.7z"/></svg>
+  </a>
+</div>
+</section>
+
+      <footer className="py-6 text-xs text-center text-gray-400">
+        © {new Date().getFullYear()} Ram G. All rights reserved.
+      </footer>
     </main>
-    
-    <!-- ----------
-    LIGHTBOX IMAGES
-    ----------- -->
-
-    <!-- PHOTOS grid -->
-    
-    <a href="#photos" class="lightbox" id="img-01"><img loading="lazy" alt="" src="//dummyimage.com/3000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-02"><img loading="lazy" alt="" src="//dummyimage.com/4000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-03"><img loading="lazy" alt="" src="//dummyimage.com/3000x4000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-04"><img loading="lazy" alt="" src="//dummyimage.com/3000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-05"><img loading="lazy" alt="" src="//dummyimage.com/4000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-06"><img loading="lazy" alt="" src="//dummyimage.com/3000x4000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-07"><img loading="lazy" alt="" src="//dummyimage.com/3000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-08"><img loading="lazy" alt="" src="//dummyimage.com/4000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-09"><img loading="lazy" alt="" src="//dummyimage.com/3000x4000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-10"><img loading="lazy" alt="" src="//dummyimage.com/3000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-11"><img loading="lazy" alt="" src="//dummyimage.com/4000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-12"><img loading="lazy" alt="" src="//dummyimage.com/3000x4000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-13"><img loading="lazy" alt="" src="//dummyimage.com/3000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-14"><img loading="lazy" alt="" src="//dummyimage.com/4000x3000/ddd/bbb"></a>
-    <a href="#photos" class="lightbox" id="img-15"><img loading="lazy" alt="" src="//dummyimage.com/3000x4000/ddd/bbb"></a>    
-    
-    <!-- Other images -->
-    
-    <a href="#about" class="lightbox" id="img-about"><img loading="lazy" alt="" src="//dummyimage.com/2400x1200/ddd/bbb"></a>
-    
-  </body>
-</html>
+  );
+}
