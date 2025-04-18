@@ -18,6 +18,18 @@
     }
 
     @media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  .hero h2, .hero p {
+    font-size: 3.5rem;
+  }
       body {
         padding: 2rem;
       }
@@ -88,10 +100,10 @@ nav a.active {
     }
 
     .hero h2, .hero p {
-      font-size: 4rem;
-      font-weight: bold;
-      margin: 0 0 1rem;
-    }
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
 
     .scroll-indicator {
       position: absolute;
@@ -118,20 +130,21 @@ nav a.active {
     }
 
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #000;
-      color: #fff;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      transition: all 0.3s ease;
-      border-bottom: 1px solid #222;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #222;
+}
 
     header.shrink h1 {
       font-size: 1.2rem;
@@ -161,7 +174,7 @@ nav a.active {
 </head>
 <body>
   <header id="main-header">
-    <h1>Ram</h1>
+    <h1><a href="#" style="color: white; text-decoration: none;">Ram</a></h1>
     <nav>
       <a href="#about">About</a>
       <a href="#timeline">Career timeline</a>
@@ -172,7 +185,7 @@ nav a.active {
 
   <section class="hero">
     <h2>My name is Ram.</h2>
-    <p><br/>This is my website.</p>
+    <p>This is my website.</p>
     <div class="scroll-indicator">↓ Scroll</div>
   </section>
 
