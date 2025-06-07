@@ -1,32 +1,226 @@
 body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #000;
       color: #fff;
       max-width: 600px;
       margin: 0 auto;
       padding: 1rem;
+      overflow-x: hidden;
     }
+
+    @media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  .hero h2, .hero p {
+    font-size: 3.5rem;
+  }
+      body {
+        padding: 2rem;
+      }
+    }
+
     a {
-      color: #60a5fa;
+      color: #fff;
       text-decoration: underline;
     }
+
     nav a {
-      margin-right: 1rem;
-    }
+  margin-right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a.active {
+  background-color: #fff;
+  color: #000;
+}
+
     h1, h2 {
       font-weight: bold;
     }
+
     .section {
-      margin: 4rem 0;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+      margin: 6rem 0;
     }
+
     .icon-links a {
       display: inline-block;
       margin-right: 1rem;
     }
+
     footer {
       text-align: center;
       font-size: 0.75rem;
       color: #888;
       padding: 2rem 0;
     }
+
+    .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  background-color: #000;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+    @media (min-width: 768px) {
+  .hero {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+    }
+
+    .hero h2, .hero p {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      font-size: 1rem;
+      opacity: 0.6;
+      animation: bounce 2s infinite;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #222;
+}
+
+    header.shrink h1 {
+      font-size: 1.2rem;
+    }
+
+    header.shrink nav a {
+      font-size: 0.85rem;
+    }
+
+    #about, #timeline, #contact {
+      background-color: #000;
+      padding: 2rem 1rem;
+      border-radius: 0;
+    }
+
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+      }
+
+      nav {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 0.75rem; /* Slightly reduce padding */
+    /* Flex direction column and align items center is already set by default */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Adjust if needed, considering shrink state */
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  header nav a {
+    display: block;
+    padding: 0.5rem 0.75rem; /* Increase tappable area */
+    margin: 0.25rem 0; /* Adjust margin for vertical stacking */
+    width: 80%; /* Make links wider for easier tapping */
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem; /* Reduce font size for mobile */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Reduce font size for mobile */
+  }
+
+  .section {
+    margin: 3rem 0; /* Reduce section margins */
+    padding: 1rem; /* Add some padding within sections if needed */
+  }
+
+  .section h2 {
+    font-size: 1.5rem; /* Adjust section heading font size */
+  }
+
+  .section p, .section ul li {
+    font-size: 0.9rem; /* Adjust paragraph and list item font size */
+    word-break: break-word; /* Ensure long words or links wrap */
+  }
+
+  /* Specific adjustments for timeline and news lists if needed */
+  #timeline ul, #news ul {
+    padding-left: 20px; /* Ensure list bullets are visible */
+  }
+
+  #timeline ul li, #news ul li {
+    margin-bottom: 0.75rem; /* Space out list items a bit */
+  }
+}
