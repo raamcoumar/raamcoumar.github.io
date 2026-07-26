@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Window from '../components/Window.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
+import BlogSection from '../components/BlogSection.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Layout>
+  <Window>
+    <div class="flex gap-8">
+      <!-- Left sidebar -->
+      <aside class="hidden md:flex shrink-0 pt-2">
+        <Sidebar />
+      </aside>
+
+      <!-- Main content -->
+      <div class="flex-1 min-w-0">
+        <Hero />
+        <Projects />
+        <BlogSection />
+        <Contact />
+      </div>
+    </div>
+  </Window>
+</Layout>

@@ -1,0 +1,37 @@
+---
+import StatCard from './StatCard.astro';
+---
+
+<section class="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+  <!-- Text content -->
+  <div class="flex-1 space-y-4 md:space-y-5">
+    <p class="text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400">
+      Marketing &amp; AI Workflows
+    </p>
+
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+      Hi, I'm <span class="relative inline-block">
+        <span class="relative z-10">Ram</span>
+        <span class="absolute inset-x-0 bottom-1 h-3 bg-accent/60 -z-0 rounded-sm"></span>
+      </span>
+    </h1>
+
+    <p class="text-sm md:text-base lg:text-lg text-gray-600 max-w-lg leading-relaxed">
+      I help teams use AI agents and automation to scale marketing that actually converts.
+    </p>
+
+    <!-- Stats row -->
+    <div class="grid grid-cols-3 gap-2 md:gap-3 pt-2 md:pt-3">
+      <StatCard label="Focus" value="AI-Augmented Growth" />
+      <StatCard label="Experience" value="5+ years" />
+      <StatCard label="Location" value="Chennai, IN" />
+    </div>
+  </div>
+
+  <!-- Headshot placeholder -->
+  <div class="shrink-0 self-center md:self-start">
+    <div class="w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-2xl bg-gray-200 flex items-center justify-center text-gray-400 text-xs md:text-sm font-medium shadow-neumorph-sm">
+      Photo
+    </div>
+  </div>
+</section>

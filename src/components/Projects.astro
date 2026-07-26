@@ -1,0 +1,55 @@
+---
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  url?: string;
+}
+
+const projects: Project[] = [
+  {
+    title: 'Hermes AI Workspace',
+    description:
+      'Custom AI agent system for daily productivity — automated research, writing, and task orchestration across multiple tools.',
+    tags: ['AI Agents', 'Automation', 'Linux'],
+  },
+  {
+    title: 'Discord AI Gateway',
+    description:
+      'Bridged chat platforms with AI agents, enabling natural-language task delegation and real-time workflow control from Discord.',
+    tags: ['Discord API', 'Gateway', 'Agents'],
+  },
+  {
+    title: 'Marketing Automation Pipeline',
+    description:
+      'AI-driven content and analytics workflows — automated reporting, content drafting, and campaign optimization using LLMs.',
+    tags: ['Marketing', 'LLMs', 'Analytics'],
+  },
+];
+---
+
+<section id="projects" class="mt-14">
+  <h2 class="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400 mb-6">
+    Projects
+  </h2>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {
+      projects.map((project) => (
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-neumorph-sm p-5 flex flex-col gap-3 hover:shadow-neumorph transition-shadow">
+          <h3 class="font-semibold text-gray-900 text-sm">{project.title}</h3>
+          <p class="text-xs text-gray-500 leading-relaxed flex-1">
+            {project.description}
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            {project.tags.map((tag) => (
+              <span class="text-[10px] font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

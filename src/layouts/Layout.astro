@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+
+const title = "Ram — Marketing & AI Workflows";
+const description =
+  "Marketing professional specializing in AI agent workflows. I help teams use AI and automation to scale marketing that actually converts.";
+const url = "https://raamcoumar.github.io";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ram" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50/30 to-amber-50/40 font-sans antialiased pb-16 md:pb-0"
+  >
+    <div class="flex items-center justify-center min-h-screen p-3 md:p-8">
+      <slot />
+    </div>
+  </body>
+</html>

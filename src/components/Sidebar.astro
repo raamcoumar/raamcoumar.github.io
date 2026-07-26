@@ -1,0 +1,37 @@
+---
+import NavIcon from './NavIcon.astro';
+---
+
+<!-- Desktop: vertical sidebar -->
+<nav class="hidden md:flex flex-col items-center gap-1" aria-label="Main navigation">
+  <NavIcon href="#contact" icon="✉" label="Contact" />
+  <NavIcon href="#projects" icon="◇" label="Projects" />
+  <NavIcon href="/about" icon="👤" label="About" />
+  <NavIcon href="#writing" icon="✎" label="Writing" />
+  <NavIcon href="https://github.com/raamcoumar" icon="⎇" label="GitHub" external />
+  <NavIcon href="https://linkedin.com/in/raamcoumar" icon="⫸" label="LinkedIn" external />
+  <NavIcon href="/rss.xml" icon="⊡" label="RSS" />
+</nav>
+
+<!-- Mobile: horizontal bottom bar -->
+<nav
+  class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 flex justify-around items-center py-2 px-4 z-50"
+  aria-label="Mobile navigation"
+>
+  <a href="#contact" class="flex flex-col items-center text-gray-400 hover:text-gray-700 p-1">
+    <span class="text-base">✉</span>
+    <span class="text-[9px] font-medium uppercase tracking-wider mt-0.5">Contact</span>
+  </a>
+  <a href="#projects" class="flex flex-col items-center text-gray-400 hover:text-gray-700 p-1">
+    <span class="text-base">◇</span>
+    <span class="text-[9px] font-medium uppercase tracking-wider mt-0.5">Projects</span>
+  </a>
+  <a href="/about" class="flex flex-col items-center text-gray-400 hover:text-gray-700 p-1">
+    <span class="text-base">👤</span>
+    <span class="text-[9px] font-medium uppercase tracking-wider mt-0.5">About</span>
+  </a>
+  <a href="#writing" class="flex flex-col items-center text-gray-400 hover:text-gray-700 p-1">
+    <span class="text-base">✎</span>
+    <span class="text-[9px] font-medium uppercase tracking-wider mt-0.5">Writing</span>
+  </a>
+</nav>

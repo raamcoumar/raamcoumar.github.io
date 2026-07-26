@@ -1,0 +1,63 @@
+---
+interface Post {
+  title: string;
+  date: string;
+  readTime: string;
+  url: string;
+}
+
+const posts: Post[] = [
+  {
+    title: 'How I Built an AI Agent That Runs My Daily Workflows',
+    date: 'Jul 2026',
+    readTime: '6 min read',
+    url: '#',
+  },
+  {
+    title: 'Marketing in the Age of AI: What Actually Works',
+    date: 'Jun 2026',
+    readTime: '4 min read',
+    url: '#',
+  },
+  {
+    title: 'From Zero to AI-Native: A Marketer\'s Journey',
+    date: 'May 2026',
+    readTime: '5 min read',
+    url: '#',
+  },
+];
+---
+
+<section id="writing" class="mt-14">
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-400">
+      Latest Writing
+    </h2>
+    <a href="#" class="text-xs font-medium text-gray-400 hover:text-gray-600 transition-colors">
+      View all →
+    </a>
+  </div>
+
+  <div class="space-y-2">
+    {
+      posts.map((post) => (
+        <a
+          href={post.url}
+          class="flex items-center justify-between group p-3 -mx-3 rounded-xl hover:bg-gray-50/80 transition-colors"
+        >
+          <div>
+            <h3 class="text-sm font-medium text-gray-800 group-hover:text-gray-900 transition-colors">
+              {post.title}
+            </h3>
+            <p class="text-xs text-gray-400 mt-0.5">
+              {post.date} &middot; {post.readTime}
+            </p>
+          </div>
+          <span class="text-gray-300 group-hover:text-gray-500 transition-colors text-sm shrink-0 ml-4">
+            ↗
+          </span>
+        </a>
+      ))
+    }
+  </div>
+</section>
