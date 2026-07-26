@@ -5,5 +5,6 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://raamcoumar.github.io',
   base: '/',
+  outDir: './docs',
   integrations: [tailwind()],
 });
