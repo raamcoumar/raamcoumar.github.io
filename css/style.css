@@ -672,9 +672,10 @@ body[data-theme="dreamland"] .shot img { border-color: rgba(255, 255, 255, .15);
   }
   .note-bubble {
     position: relative;
+    display: block;            /* button is inline-block by default — needs block for margin auto to work */
     bottom: auto; right: auto;
     width: 230px;
-    margin: 24px 0 0 auto;
+    margin: 24px 0 -90px auto;   /* pull the doodles up so the bubble hovers right above the sleeper */
   }
   .home-doodles { width: 260px; height: 260px; }
   .home-doodles .person { width: 220px; }
