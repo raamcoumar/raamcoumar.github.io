@@ -15,3 +15,4 @@ resume/
 # vercel local env + secrets (KV tokens) — never commit
 .vercel/
 .env*.local
+.likes.json

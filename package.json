@@ -1,7 +1,7 @@
 {
-  "name": "mypersonalwebsite",
+  "name": "ram-dot",
   "version": "1.0.0",
-  "description": "",
+  "description": "ram. — a hand-drawn, minimal personal website (vanilla HTML/CSS/JS, bilingual En/த)",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/idbetterrun/tanqinghuadot.git"
+    "url": "git+https://github.com/raamcoumar/raamcoumar.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ram",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/idbetterrun/tanqinghuadot/issues"
+    "url": "https://github.com/raamcoumar/raamcoumar.github.io/issues"
   },
-  "homepage": "https://github.com/idbetterrun/tanqinghuadot#readme",
+  "homepage": "https://github.com/raamcoumar/raamcoumar.github.io#readme",
   "dependencies": {
     "@upstash/redis": "^1.38.0"
   }

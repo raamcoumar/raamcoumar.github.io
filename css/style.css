@@ -10,13 +10,13 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "chillzhuo";
+  font-family: "ChillZhuo";
   src: url("/assets/fonts/ChillZhuo.woff2") format("woff2");
   font-display: swap;
 }
 
 :root {
-  --font-hand: "tanqinghua", "chillzhuo", system-ui, sans-serif;   /* 标题:拉丁走 tanqinghua,中文(tanqinghua 无此字形)回落 chillzhuo */
+  --font-hand: "tanqinghua", "Karla Tamil Inclined", system-ui, sans-serif;   /* Latin → tanqinghua, Tamil → Karla Tamil Inclined */
   --font-body: "Inter", "Work Sans", system-ui, sans-serif;  /* 正文 / 其余一切 */
 
   /* 基础主题（home / about / works列表 / contact） */
@@ -27,10 +27,14 @@
 }
 
 /* ---------- 代表色主题（data-theme） ---------- */
-body[data-theme="tomanotes"]  { --bg: #EAE7E1; --ink: #1A1A1A; }
-body[data-theme="notiee"]     { --bg: #09C576; --ink: #0A2A1B; }
-body[data-theme="artista"]    { --bg: #F5DFF3; --ink: #2A1A28; }
-body[data-theme="dreamland"]  { --bg: #121212; --ink: #F5F5F5; } /* 暗色，文字翻白 */
+body[data-theme="suryanfm"]    { --bg: #F5DFF3; --ink: #2A1A28; }
+body[data-theme="bigfm"]       { --bg: #D6EAF8; --ink: #1A2733; }
+body[data-theme="notionpress"] { --bg: #FBE9E7; --ink: #3E1A1A; }
+body[data-theme="freshworks"]  { --bg: #EAE7E1; --ink: #1A1A1A; }
+body[data-theme="tomanotes"]   { --bg: #EAE7E1; --ink: #1A1A1A; }
+body[data-theme="notiee"]      { --bg: #09C576; --ink: #0A2A1B; }
+body[data-theme="artista"]     { --bg: #F5DFF3; --ink: #2A1A28; }
+body[data-theme="dreamland"]   { --bg: #121212; --ink: #F5F5F5; }
 
 /* ---------- Reset-ish ---------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -49,9 +53,9 @@ body {
 
 a { color: inherit; }
 
-/* 中文模式：正文用中文系统字体；标题手写体的中文字符由 --font-hand 里的 chillzhuo 兜底(见上) */
-html[lang="zh"] body {
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+/* Tamil mode: body → Mukta Malar, titles → Karla Tamil Inclined */
+html[lang="ta"] body {
+  font-family: "Mukta Malar", "Noto Sans Tamil", "Latha", system-ui, sans-serif;
 }
 
 /* ============================================================
@@ -85,19 +89,6 @@ html[lang="zh"] body {
   display: flex;
   flex-direction: column;
   gap: 2px;
-}
-
-.site-beian-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 12px;
-}
-.site-beian {
-  color: inherit;
-  text-decoration: none;
-}
-.site-beian:hover {
-  text-decoration: underline;
 }
 
 /* 网站名：手写体，永远链回首页 */
@@ -330,16 +321,16 @@ body[data-theme="dreamland"] .doodle { filter: invert(1); }
 .note-bubble-img { display: block; width: 100%; height: auto; }
 .note-bubble-text {
   position: absolute;
-  left: 10%;
-  top: 19%;
-  width: 58%;
-  height: 46%;
+  left: 24%;
+  top: 26%;
+  width: 40%;
+  height: 44%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: "chillzhuo", var(--font-hand);
-  font-size: 1.45rem;
+  font-family: var(--font-hand);
+  font-size: 1.1rem;
   line-height: 1.25;
   color: var(--ink);
 }

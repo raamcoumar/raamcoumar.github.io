@@ -1,4 +1,4 @@
-/* tanqinghua. — shared behaviour
+/* ram. — shared behaviour
    1) 注入共享左列导航
    2) 按当前文件名判 active（works / talks 子页分别强制高亮对应项）
    3) works 列表 hover → data-theme 预览代表色
@@ -10,15 +10,15 @@
   function markActive() {
     var path = location.pathname;
     var file = path.split("/").pop() || "index.html";
-    var inWorks = path.indexOf("/works/") !== -1;   // app 详情页
-    var inTalks = path.indexOf("/talks/") !== -1;   // talks 详情页
+    var inCareers = path.indexOf("/career/") !== -1;   // career detail pages
+    var inBlog = path.indexOf("/blog/") !== -1;       // blog detail pages
 
     document.querySelectorAll(".nav a").forEach(function (a) {
       var href = a.getAttribute("href") || "";
       var hrefFile = href.split("/").pop();
       if (hrefFile === file
-          || (inWorks && hrefFile === "works.html")
-          || (inTalks && hrefFile === "talks.html")) {
+          || (inCareers && hrefFile === "career.html")
+          || (inBlog && hrefFile === "blog.html")) {
         a.classList.add("active");
       }
     });
@@ -243,13 +243,21 @@
     cat.addEventListener("pointercancel", up);
   }
 
-  /* home 聊天气泡：随机一句手写打招呼 */
+  /* home 聊天气泡：按固定顺序逐条播放，点一下看下一条 */
   function setupNoteBubble() {
     var el = document.querySelector(".note-bubble-text");
-    if (!el) return;
+    var btn = document.querySelector(".note-bubble");
+    if (!el || !btn) return;
     var g = window.I18N ? I18N.greetings() : [];
     if (!g.length) return;
-    el.textContent = g[Math.floor(Math.random() * g.length)];
+    var idx = 0;
+
+    el.textContent = g[0];
+
+    btn.addEventListener("click", function () {
+      idx = (idx + 1) % g.length;
+      el.textContent = g[idx];
+    });
   }
 
   /* 每页底部注入版权页脚 */
@@ -261,29 +269,8 @@
 
     var copy = document.createElement("span");
     copy.setAttribute("data-i18n", "footer");
-    copy.textContent = "Copyright © 2026 tanqinghua. All Rights Reserved.";
+    copy.textContent = "Copyright © 2026 ram. All Rights Reserved.";
     f.appendChild(copy);
-
-    var beianRow = document.createElement("div");
-    beianRow.className = "site-beian-row";
-
-    var beian = document.createElement("a");
-    beian.className = "site-beian";
-    beian.href = "https://beian.miit.gov.cn/";
-    beian.target = "_blank";
-    beian.rel = "noopener";
-    beian.textContent = "湘ICP备2026027627号-1";
-    beianRow.appendChild(beian);
-
-    var gabeian = document.createElement("a");
-    gabeian.className = "site-beian";
-    gabeian.href = "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802049439";
-    gabeian.target = "_blank";
-    gabeian.rel = "noopener";
-    gabeian.textContent = "京公网安备 11010802049439 号";
-    beianRow.appendChild(gabeian);
-
-    f.appendChild(beianRow);
 
     page.appendChild(f);
   }
@@ -297,7 +284,7 @@
       .then(function (html) {
         slot.innerHTML = html;
         markActive();
-        if (window.I18N) I18N.bindToggle(slot);
+        if (window.I18N) { I18N.apply(slot); I18N.bindToggle(slot); }
       })
       .catch(function (err) {
         console.error("nav inject failed:", err);

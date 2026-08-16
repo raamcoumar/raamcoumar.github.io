@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ram.</title>
+  <title>big fm — ram.</title>
   <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
   <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
@@ -16,28 +16,21 @@
   <script src="/js/i18n.js?v=4" defer></script>
   <script src="/js/main.js?v=3" defer></script>
 </head>
-<body>
+<body data-theme="bigfm">
   <div class="page">
     <div id="nav-placeholder"></div>
 
     <main class="content">
-      <!-- home：焦点是涂鸦，留白是对的，别填。 -->
+      <a class="back-link" href="/career.html">← career</a>
+
+      <h1 class="detail-title">big fm</h1>
+      <p class="detail-tagline">where i learned to move fast</p>
+      <p class="detail-meta">role · date range</p>
+
+      <div class="detail-body">
+        <p>what i did here.</p>
+      </div>
     </main>
-
-    <!-- 聊天气泡：随机打招呼，点击换一句 -->
-    <button class="note-bubble" type="button"
-       aria-label="click for a new greeting" data-i18n-attr="aria-label:home.bubbleAria">
-      <img class="note-bubble-img" src="/assets/doodles/home-bubble.png" alt="">
-      <span class="note-bubble-text" aria-hidden="true"></span>
-    </button>
-
-    <div class="doodles home-doodles" aria-hidden="true">
-      <img class="doodle z" src="/assets/doodles/home-z.png" alt="">
-      <img class="doodle z" src="/assets/doodles/home-z.png" alt="">
-      <img class="doodle z" src="/assets/doodles/home-z.png" alt="">
-      <img class="doodle person" src="/assets/doodles/home-person.png" alt="a little person sleeping">
-    </div>
   </div>
-
 </body>
 </html>

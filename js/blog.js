@@ -1,4 +1,4 @@
-/* talks. — 列表 + 详情 + 点赞 + 星星彩蛋
+/* blog. — 列表 + 详情 + 点赞 + 星星彩蛋
    纯静态:posts.json 当清单,正文 .zh.md / .en.md 运行时 fetch 渲染。
    依赖 window.I18N(语言)与 window.marked(详情页 markdown)。 */
 (function () {
@@ -19,7 +19,7 @@
   }
 
   function fetchPosts() {
-    return fetch("/talks/posts.json").then(function (r) {
+    return fetch("/blog/posts.json").then(function (r) {
       if (!r.ok) throw new Error("posts.json " + r.status);
       return r.json();
     });
@@ -60,7 +60,7 @@
       }).join("");
       var summary = (p.summary && (p.summary[l] || p.summary.en)) || "";
       var titleObj = p.title || {};
-      return '<li class="talks-item"><a class="talks-item-link" href="/talks/'
+      return '<li class="talks-item"><a class="talks-item-link" href="/blog/'
         + encodeURIComponent(p.slug) + '">'
         + '<span class="talks-item-date">' + esc(fmtDate(p.date, l)) + "</span>"
         + '<span class="talks-item-title">' + esc(titleObj[l] || titleObj.en || "") + "</span>"
@@ -90,7 +90,7 @@
       renderList(listEl);
       bindChips(listEl);
     }).catch(function (err) {
-      console.error("[talks] failed to load posts:", err);
+      console.error("[blog] failed to load posts:", err);
       listEl.innerHTML = '<li class="talks-empty">' + esc(t("empty")) + "</li>";
     });
   }
@@ -182,18 +182,18 @@
     if (dayEl) dayEl.textContent = cd.getDate();           /* 日历下侧:日期数字 */
     if (dEl) dEl.textContent = fmtDate(post.date, l);
     if (tEl) tEl.textContent = titleObj[l] || titleObj.en || "";
-    document.title = (titleObj[l] || titleObj.en || "talks") + " — ram.";
+    document.title = (titleObj[l] || titleObj.en || "blog") + " — ram.";
   }
 
   function loadBody(post, root) {
     var bodyEl = root.querySelector("[data-talks-body]");
     if (!bodyEl) return;
-    fetch("/talks/" + encodeURIComponent(post.slug) + "." + lang() + ".md")
+    fetch("/blog/" + encodeURIComponent(post.slug) + "." + lang() + ".md")
       .then(function (r) { return r.ok ? r.text() : Promise.reject(new Error("md " + r.status)); })
       .then(function (md) {
         bodyEl.innerHTML = window.marked ? window.marked.parse(md) : esc(md);
       })
-      .catch(function (err) { console.error("[talks] failed to load body:", err); bodyEl.textContent = t("empty"); });
+      .catch(function (err) { console.error("[blog] failed to load body:", err); bodyEl.textContent = t("empty"); });
   }
 
   function initDetail(root) {
@@ -218,7 +218,7 @@
         loadBody(post, root);
       });
     }).catch(function (err) {
-      console.error("[talks] failed to load post:", err);
+      console.error("[blog] failed to load post:", err);
       var tEl = root.querySelector("[data-talks-title]");
       if (tEl) tEl.textContent = t("empty");
     });

@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "2026-08-03-getting-started-ai-agents",
+    "date": "2026-08-03",
+    "tags": ["ai", "agents"],
+    "title": {
+      "en": "getting started with ai agents",
+      "zh": "AI 智能体入门"
+    },
+    "summary": {
+      "en": "three things i've learned building autonomous workflows — from simple prompts to agents that work while you sleep.",
+      "zh": "构建自主工作流的三点心得。"
+    }
+  },
+  {
+    "slug": "2026-08-03-why-i-built-this-site",
+    "date": "2026-08-03",
+    "tags": ["meta", "personal"],
+    "title": {
+      "en": "why i built this site",
+      "zh": "为什么我建了这个网站"
+    },
+    "summary": {
+      "en": "on wanting a place on the internet that actually feels like home — and how a friend's codebase made it possible.",
+      "zh": "关于想要一个真正属于自己的互联网角落——以及一个朋友的代码库如何让这一切成为可能。"
+    }
+  }
+]
