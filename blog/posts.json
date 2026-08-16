@@ -4,12 +4,10 @@
     "date": "2026-08-03",
     "tags": ["ai", "agents"],
     "title": {
-      "en": "getting started with ai agents",
-      "ta": "AI ஏஜென்ட்களுடன் தொடக்கம்"
+      "en": "getting started with ai agents"
     },
     "summary": {
-      "en": "three things i've learned building autonomous workflows — from simple prompts to agents that work while you sleep.",
-      "ta": "தன்னாட்சி workflow-களை கட்டமைக்க கற்றுக்கொண்ட மூன்று விஷயங்கள்."
+      "en": "three things i've learned building autonomous workflows — from simple prompts to agents that work while you sleep."
     }
   },
   {
@@ -17,12 +15,10 @@
     "date": "2026-08-03",
     "tags": ["meta", "personal"],
     "title": {
-      "en": "why i built this site",
-      "ta": "ஏன் இந்த தளத்தை உருவாக்கினேன்"
+      "en": "why i built this site"
     },
     "summary": {
-      "en": "on wanting a place on the internet that actually feels like home — and how a friend's codebase made it possible.",
-      "ta": "இணையத்தில் வீடு போல உணரும் ஒரு இடம் வேண்டும் என்ற ஆசை — ஒரு நண்பரின் codebase அதை சாத்தியமாக்கியது."
+      "en": "on wanting a place on the internet that actually feels like home — and how a friend's codebase made it possible."
     }
   }
 ]

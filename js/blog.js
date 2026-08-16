@@ -1,13 +1,12 @@
 /* blog. — 列表 + 详情 + 点赞 + 星星彩蛋
-   纯静态:posts.json 当清单,正文 .zh.md / .en.md 运行时 fetch 渲染。
+   纯静态:posts.json 当清单,正文 .en.md 运行时 fetch 渲染(仅英文)。
    依赖 window.I18N(语言)与 window.marked(详情页 markdown)。 */
 (function () {
   "use strict";
 
-  /* talks 专属动态文案(页面外壳走 i18n;这里只放列表/详情里 JS 生成的少量字) */
+  /* blog 专属动态文案(页面外壳走 i18n;这里只放列表/详情里 JS 生成的少量字) */
   var STR = {
-    en: { empty: "nothing here yet." },
-    zh: { empty: "这里还什么都没有。" }
+    en: { empty: "nothing here yet." }
   };
   function lang() { return (window.I18N && window.I18N.current) || "en"; }
   function t(k) { return (STR[lang()] || STR.en)[k]; }
@@ -31,9 +30,6 @@
 
   function fmtDate(iso, l) {
     var d = new Date(iso + "T00:00:00");
-    if (l === "zh") {
-      return d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + d.getDate() + "日";
-    }
     var m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     return m[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
@@ -84,7 +80,6 @@
   }
 
   function initList(listEl) {
-    document.addEventListener("langchange", function () { renderList(listEl); });
     fetchPosts().then(function (posts) {
       listState.posts = posts.slice().sort(byDateDesc);
       renderList(listEl);
@@ -188,7 +183,7 @@
   function loadBody(post, root) {
     var bodyEl = root.querySelector("[data-talks-body]");
     if (!bodyEl) return;
-    fetch("/blog/" + encodeURIComponent(post.slug) + "." + lang() + ".md")
+    fetch("/blog/" + encodeURIComponent(post.slug) + ".en.md")
       .then(function (r) { return r.ok ? r.text() : Promise.reject(new Error("md " + r.status)); })
       .then(function (md) {
         bodyEl.innerHTML = window.marked ? window.marked.parse(md) : esc(md);
@@ -213,10 +208,6 @@
       loadBody(post, root);
       setupLike(post.slug, root);
       setupStars(document);
-      document.addEventListener("langchange", function () {
-        renderHead(post, root);
-        loadBody(post, root);
-      });
     }).catch(function (err) {
       console.error("[blog] failed to load post:", err);
       var tEl = root.querySelector("[data-talks-title]");
