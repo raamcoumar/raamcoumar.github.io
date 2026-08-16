@@ -593,6 +593,12 @@ body[data-theme="dreamland"] .shot img { border-color: rgba(255, 255, 255, .15);
   border-radius: 999px;
   transition: background-color .2s ease, color .2s ease, transform .1s ease;
 }
+.social-handle {
+  font-family: var(--font-body);
+  font-size: .8rem;
+  opacity: .55;
+  margin-left: 4px;
+}
 .social-chip:hover,
 .social-chip:focus-visible {
   background: var(--accent);
