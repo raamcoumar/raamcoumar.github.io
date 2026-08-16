@@ -9,11 +9,6 @@
   src: url("/assets/fonts/tanqinghuafont.woff2") format("woff2");
   font-display: swap;
 }
-@font-face {
-  font-family: "ChillZhuo";
-  src: url("/assets/fonts/ChillZhuo.woff2") format("woff2");
-  font-display: swap;
-}
 
 :root {
   --font-hand: "tanqinghua", "Karla Tamil Inclined", system-ui, sans-serif;   /* Latin → tanqinghua, Tamil → Karla Tamil Inclined */
