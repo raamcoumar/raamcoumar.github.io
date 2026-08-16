@@ -16,3 +16,4 @@ resume/
 .vercel/
 .env*.local
 .likes.json
+.claude/
